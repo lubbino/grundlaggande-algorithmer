@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Bubble Sort 1</title>
+        <meta name="description" content="An exercise on how to sort an array with Bubble sort">
+
+        <script>
+            
+            var list_to_sort = [];
+            var input_turn = 0;
+            
+            //Try to rewrite the sort function so it sort the array with bubble sort
+            
+            function sort(list_to_sort) {
+                document.getElementById("output_area").innerHTML += "<br>Ok.. now I'm in the sort function yay.. Time to get things sorted.. Big up for BUBBLE SORT.. WOO.."; 
+            
+                // Bubble Sort starts here
+                // We go through the list multiple times and swap elements that are in the wrong order
+            
+                for (let i = 0; i < list_to_sort.length - 1; i++) {
+                    for (let j = 0; j < list_to_sort.length - 1 - i; j++) {
+                    
+                        // If the number to the left is greater than the one to the right - swap places
+                        if (parseInt(list_to_sort[j]) > parseInt(list_to_sort[j + 1])) {
+                        
+                            // Temporarily save the larger value
+                            let temp = list_to_sort[j];
+                        
+                            // Move the smaller value one step to the left
+                            list_to_sort[j] = list_to_sort[j + 1];
+                        
+                            // Put the larger value to the right
+                            list_to_sort[j + 1] = temp;
+                        }
+                    }
+                }
+            
+
+            // Print the sorted list
+            document.getElementById("output_area").innerHTML += "<br>Sorted array: " + list_to_sort;
+
+            // Reflection:
+            // Bubble sort works well for small lists, like in this case with only 5 numbers.
+            // It is easy to understand and implement, which makes it good for beginners or educational purposes.
+            // The algorithm compares each element with the next and swaps if needed, repeating until the list is sorted.
+            // The biggest drawback is its time complexity: O(n^2) in both worst and average cases,
+            // which means the time it takes grows quickly as the list gets bigger.
+            // For example, if you double the number of elements, the number of comparisons quadruples in the worst case.
+            // Because of this, bubble sort is much slower than more efficient algorithms like merge sort (O(n log n)) or quicksort (O(n log n)) when working with large data sets.
+            // Therefore, bubble sort is mostly used only for small lists or as a teaching exercise. It is perfect for understanding basic sorting principles.
+            // But for larger lists, it is better to use more efficient algorithms like merge sort or quicksort since they are much faster and more efficient.
+}
+            
+            
+            
+            
+            
+            function user_input(){
+            
+                list_to_sort[input_turn]=document.getElementById('user_input').value; //Retrieve the user input and put it into the array. The first will be on position 0 in the array
+                
+               
+                input_turn++ //increase the turn number
+                
+                document.getElementById("output_area").innerHTML = "Enter number " + (input_turn+1);
+                
+                
+                
+                
+                if (input_turn==5){
+                
+                document.getElementById("input_area").innerHTML = ""; //Remove the input area so no more pesky numbers are sent from the user. WE ARE FULL..
+                    
+                 document.getElementById("output_area").innerHTML = "Woohoo.. You have entered 5 numbers and now we can get going.. <br> The unsorted array: " + list_to_sort;
+                    
+                
+                sort(list_to_sort); //Send the list to the sort function
+                    
+                }
+                
+            
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+
+        <h1>Bubblesort 1</h1>
+        
+        <h2>In this exersise you will enter 5 numbers to be sorted</h2>
+        
+        <div id="output_area">
+            Enter number 1.
+        </div>
+        
+        <div id="input_area">
+            
+            <p>
+            
+                <input type="text" id="user_input">
+            
+          <!--
+            When the button is pressed the function named user_input is called
+        -->
+                <button type="button" onclick="user_input()">Submit</button>
+           
+            </p>
+        </div> 
+       
+    </body>
+</html>
