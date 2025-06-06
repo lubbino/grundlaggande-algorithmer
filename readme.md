@@ -6,10 +6,10 @@ Detta projekt innehåller grundläggande algoritmer demonstrerade med HTML-filer
 
 Projektet består av följande HTML-filer:
 
-- **bubblesort.html**  
+- **sortering.html**  
     Visar hur bubblesort-algoritmen fungerar steg för steg.
 
-- **binarysearch.html**  
+- **sokning.html**  
     Demonstrerar binärsökning på en sorterad lista.
 
-*Skapad för utbildningssyfte av Ludvig Lifbom med modifikationer till <br>https://github.com/r-/Overtornea-Makerspace/blob/master/Programmering/JavaScript/binary_search_1<br>https://github.com/r-/Overtornea-Makerspace/blob/master/Programmering/JavaScript/Bubble_Sort_1.*
+*Skapad för utbildningssyfte av Ludvig Lifbom med modifikationer till: <br>https://github.com/r-/Overtornea-Makerspace/blob/master/Programmering/JavaScript/binary_search_1<br>https://github.com/r-/Overtornea-Makerspace/blob/master/Programmering/JavaScript/Bubble_Sort_1.*
